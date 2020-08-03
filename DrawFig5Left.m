@@ -59,15 +59,15 @@ semilogy(DsnrdBVec,BERvec,'r');
 semilogy([0,20],[1,1]*1e-3/50,'k-.');
 semilogy([0,20],[1,1]*0.0012,'k--');
 axis([0,20,1e-7,1])
-legend('Predicted BER','Simulated BER','metaconverse for K = 50','metaconverse for K = 13');
+legend('Predicted BER','Simulated BER','converse for K = 50','converse for K = 13');
 xlabel('SNR of feedback channel','FontSize',24);
 ylabel('BER','FontSize',24);
 toc(starttime)
-save('DrawFig5Left.mat');
+% save('DrawFig5Left.mat');
 % nPAMsyms = 1e7 runtime is 346 seconds and BER of 1e-6 is smooth
 % Take nPAMsyms = 1e8
 
-% Getting the meta converse bound without feedback addpath spectre-master\awgn\
+% Getting the converse bound without feedback addpath spectre-master\awgn\
 % converse(150,1e-3,1)/150 = 0.333 % for n = 150. the BER is lower bounded
 % by 1e-3/50
 
